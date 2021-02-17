@@ -1,5 +1,10 @@
 const container = document.querySelector('#container')
 
+const title = document.createElement('div')
+title.textContent = "Etch A Sketch"
+title.className = "title"
+container.append(title)
+
 const clearButton = document.createElement('button')
 clearButton.textContent = "Clear Grid"
 clearButton.className = "clearButton"
@@ -27,6 +32,8 @@ function createHover() {
         div.addEventListener('mouseover', () => {
             //div.classList.add("grid-over")
             div.style.backgroundColor = randomColor()
+            div.style.transition = "all 0.15s ease"
+
         })
     })
 }
